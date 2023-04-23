@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -24,6 +25,19 @@ namespace eTickets.Models
         // using the custom enum from /data/MovieCategory.cs
         public MovieCategory MovieCategory { get; set; }
 
-        
+        // Relationship
+        public List<Actor_Movies> Actors_Movies { get; set; }
+
+        // Cinema
+        public int Cinema_ID { get; set; }
+
+        [ForeignKey("Cinema_ID")]
+        public CinemaModel Cinema { get; set; }
+
+        // Producer
+        public int Producer_ID { get; set; }
+
+        [ForeignKey("Producer_ID")]
+        public ProducerModel Producer { get; set; }
     }
 }
