@@ -26,8 +26,7 @@ namespace eTickets
         public void ConfigureServices(IServiceCollection services)
         {
             // DbContext Config
-            services.AddDbContext<AppDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("DefaultConnectionString")));
-
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
             services.AddControllersWithViews();
         }
 

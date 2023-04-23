@@ -18,6 +18,6 @@ namespace eTickets.Models
         public string Biography { get; set; }
 
         // Relationship
-        public List<Actor_Movies> Actors_Movies { get; set; }
+        public List<Actor_Movie> Actors_Movies { get; set; }
     }
 }
