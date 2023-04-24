@@ -5,7 +5,6 @@ D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\bin\Debug\net5.0\eTickets.de
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\bin\Debug\net5.0\eTickets.runtimeconfig.json
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\bin\Debug\net5.0\eTickets.runtimeconfig.dev.json
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\bin\Debug\net5.0\eTickets.dll
-D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\bin\Debug\net5.0\ref\eTickets.dll
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\bin\Debug\net5.0\eTickets.pdb
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\bin\Debug\net5.0\eTickets.Views.dll
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\bin\Debug\net5.0\eTickets.Views.pdb
@@ -62,7 +61,6 @@ D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\eTickets.Mv
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\eTickets.RazorAssemblyInfo.cache
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\eTickets.RazorAssemblyInfo.cs
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\staticwebassets\eTickets.StaticWebAssets.Manifest.cache
-D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\staticwebassets\eTickets.StaticWebAssets.xml
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\scopedcss\bundle\eTickets.styles.css
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\eTickets.TagHelpers.input.cache
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\eTickets.TagHelpers.output.cache
@@ -82,3 +80,9 @@ D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\eTickets.dl
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\ref\eTickets.dll
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\eTickets.pdb
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\eTickets.genruntimeconfig.cache
+D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\staticwebassets\eTickets.StaticWebAssets.Pack.cache
+D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\staticwebassets\msbuild.eTickets.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\staticwebassets\msbuild.build.eTickets.props
+D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.eTickets.props
+D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.eTickets.props
+D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\refint\eTickets.dll
