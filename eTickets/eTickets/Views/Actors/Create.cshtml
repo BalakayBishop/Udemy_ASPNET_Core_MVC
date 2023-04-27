@@ -49,6 +49,9 @@
 @section Scripts{
     <script>
         $(document).ready(function () {
+            let url = $('#ProfilePicURL').val();
+            $('#ProfilePicturePreview').attr({ "src": $(this).val() });
+
             $('#ProfilePicURL').on("input", function () {
                 $('#ProfilePicturePreview').attr({"src": $(this).val()});
             })
