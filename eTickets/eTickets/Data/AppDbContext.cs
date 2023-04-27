@@ -29,6 +29,11 @@ namespace eTickets.Data
             base.OnModelCreating(modelBuilder);
         }
 
+        internal void SaveChangesASync()
+        {
+            throw new NotImplementedException();
+        }
+
         // Table Names for all Models
         public DbSet<ActorModel> Actors { get; set; }
         public DbSet<MovieModel> Movies { get; set; }
