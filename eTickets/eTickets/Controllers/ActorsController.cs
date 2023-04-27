@@ -1,9 +1,6 @@
-﻿using eTickets.Data;
-using eTickets.Data.Services;
+﻿using eTickets.Data.Services;
 using eTickets.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace eTickets.Controllers
@@ -18,7 +15,7 @@ namespace eTickets.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var data = await _service.GetAll();
+            var data = await _service.GetAllAsync();
             return View(data);
         }
 
@@ -35,8 +32,21 @@ namespace eTickets.Controllers
             {
                 return View(actor);
             }
-            _service.Add(actor);
+            await _service.AddAsync(actor);
             return RedirectToAction(nameof(Index));
+        }
+
+        // Get: /Actors/Create
+        public async Task<IActionResult> Details(int id)
+        {
+            ActorModel actor_details = await _service.GetByIDAsync(id);
+
+            if (actor_details == null)
+            {
+                return View("Empty");
+            }
+
+            return View(actor_details);
         }
     }
 }
