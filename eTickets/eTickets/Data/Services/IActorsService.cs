@@ -10,6 +10,6 @@ namespace eTickets.Data.Services
         Task<ActorModel> GetByIDAsync(int id);
         Task AddAsync(ActorModel actor);
         Task<ActorModel> UpdateAsync(int id, ActorModel newActor);
-        void Delete(int id);
+        Task DeleteAsync(int id);
     }
 }
