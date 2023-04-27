@@ -8,13 +8,16 @@ namespace eTickets.Models
 {
     public class ActorModel
     {
-        // This model needs a unique identifier for this class, but also for table roles
-
-        [Key] // this pk needs the import of DataAnnotations
+        [Key]
         public int Actor_ID { get; set; }
 
+        [Display(Name = "Profile Picture")]
         public string ProfilePicURL { get; set; }
+
+        [Display(Name = "Full Name")]
         public string FullName { get; set; }
+
+        [Display(Name = "Biography")]
         public string Biography { get; set; }
 
         // Relationship

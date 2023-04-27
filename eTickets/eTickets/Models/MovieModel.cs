@@ -22,7 +22,6 @@ namespace eTickets.Models
         public DateTime Start_Date { get; set; }
         public DateTime End_Date { get; set; }
 
-        // using the custom enum from /data/MovieCategory.cs
         public MovieCategory MovieCategory { get; set; }
 
         // Relationship
