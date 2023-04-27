@@ -88,3 +88,4 @@ D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\staticwebas
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\refint\eTickets.dll
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\Razor\Views\Actors\Index.cshtml.g.cs
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\Razor\Views\Producers\Index.cshtml.g.cs
+D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\Razor\Views\Cinemas\Index.cshtml.g.cs
