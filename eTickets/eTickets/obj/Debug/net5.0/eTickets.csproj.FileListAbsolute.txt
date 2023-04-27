@@ -92,3 +92,4 @@ D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\Razor\Views
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\Razor\Views\Actors\Details.cshtml.g.cs
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\Razor\Views\Actors\Edit.cshtml.g.cs
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\Razor\Views\Actors\Delete.cshtml.g.cs
+D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\Razor\Views\Shared\NotFound.cshtml.g.cs
