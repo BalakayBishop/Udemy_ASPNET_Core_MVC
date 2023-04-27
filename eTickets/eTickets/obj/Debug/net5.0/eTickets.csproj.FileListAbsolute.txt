@@ -86,3 +86,4 @@ D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\staticwebas
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.eTickets.props
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.eTickets.props
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\refint\eTickets.dll
+D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\Razor\Views\Actors\Index.cshtml.g.cs
