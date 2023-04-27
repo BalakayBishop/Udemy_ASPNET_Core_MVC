@@ -8,6 +8,7 @@ namespace eTickets.Controllers
     public class ActorsController : Controller
     {
         private readonly IActorsService _service;
+
         public ActorsController(IActorsService service)
         {
             _service = service;
@@ -19,14 +20,14 @@ namespace eTickets.Controllers
             return View(data);
         }
 
-        // Get: /Actors/Create
+        //Get: Actors/Create
         public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("FullName,ProfilePicURL,Biography")] ActorModel actor)
+        public async Task<IActionResult> Create([Bind("FullName,ProfilePictureURL,Bio")] ActorModel actor)
         {
             if (!ModelState.IsValid)
             {
@@ -36,17 +37,32 @@ namespace eTickets.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // Get: /Actors/Create
+        //Get: Actors/Details/1
         public async Task<IActionResult> Details(int id)
         {
-            ActorModel actor_details = await _service.GetByIDAsync(id);
+            var actorDetails = await _service.GetByIDAsync(id);
 
-            if (actor_details == null)
+            if (actorDetails == null) return View("NotFound");
+            return View(actorDetails);
+        }
+
+        //Get: Actors/Create
+        public async Task<IActionResult> Edit(int id)
+        {
+            var actorDetails = await _service.GetByIDAsync(id);
+            if (actorDetails == null) return View("NotFound");
+            return View(actorDetails);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, [Bind("Actor_ID,FullName,ProfilePicURL,Biography")] ActorModel actor)
+        {
+            if (!ModelState.IsValid)
             {
-                return View("Empty");
+                return View(actor);
             }
-
-            return View(actor_details);
+            await _service.UpdateAsync(id, actor);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

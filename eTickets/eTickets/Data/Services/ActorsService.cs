@@ -1,6 +1,9 @@
 ﻿using eTickets.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Numerics;
 using System.Threading.Tasks;
 
 namespace eTickets.Data.Services
@@ -21,7 +24,7 @@ namespace eTickets.Data.Services
 
         public void Delete(int id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public async Task<IEnumerable<ActorModel>> GetAllAsync()
@@ -36,9 +39,21 @@ namespace eTickets.Data.Services
             return result;
         }
 
-        public ActorModel Update(int id, ActorModel newActor)
+        public async Task<ActorModel> UpdateAsync(int id, ActorModel updateActor)
         {
-            throw new System.NotImplementedException();
+            var actor = await _context.Actors.FirstOrDefaultAsync(a => a.Actor_ID == id);
+
+            if (actor != null)
+            {
+                actor.FullName = updateActor.FullName;
+                actor.ProfilePicURL = updateActor.ProfilePicURL;
+                actor.Biography = updateActor.Biography;
+
+                await _context.SaveChangesAsync();
+            }
+
+            return actor;
         }
+
     }
 }
