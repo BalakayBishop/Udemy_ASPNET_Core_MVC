@@ -16,31 +16,28 @@ namespace eTickets.Data.Services
             _context = context;
         }
 
-        public async Task AddAsync(ActorModel actor)
-        {
-            await _context.Actors.AddAsync(actor);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task DeleteAsync(int id)
-        {
-            var result = await _context.Actors.FirstOrDefaultAsync(a => a.Actor_ID == id);
-            _context.Actors.Remove(result);
-            await _context.SaveChangesAsync();
-        }
-
+        // ----- GET ALL USERS -----
         public async Task<IEnumerable<ActorModel>> GetAllAsync()
         {
             var result = await _context.Actors.ToListAsync();
             return result;
         }
 
+        // ----- GET SINGLE USER -----
         public async Task<ActorModel> GetByIDAsync(int id)
         {
             var result = await _context.Actors.FirstOrDefaultAsync(n => n.Actor_ID == id);
             return result;
         }
 
+        // ----- ADD NEW USER -----
+        public async Task AddAsync(ActorModel actor)
+        {
+            await _context.Actors.AddAsync(actor);
+            await _context.SaveChangesAsync();
+        }
+
+        // ----- UPDATE USER -----
         public async Task<ActorModel> UpdateAsync(int id, ActorModel updateActor)
         {
             var actor = await _context.Actors.FirstOrDefaultAsync(a => a.Actor_ID == id);
@@ -55,6 +52,14 @@ namespace eTickets.Data.Services
             }
 
             return actor;
+        }
+
+        // ----- DELETE USER -----
+        public async Task DeleteAsync(int id)
+        {
+            var result = await _context.Actors.FirstOrDefaultAsync(a => a.Actor_ID == id);
+            _context.Actors.Remove(result);
+            await _context.SaveChangesAsync();
         }
 
     }
