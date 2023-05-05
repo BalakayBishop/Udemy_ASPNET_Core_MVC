@@ -224,95 +224,95 @@ namespace eTickets.Data
                         new Actor_Movie()
                         {
                             Actor_ID = 1,
-                            Movie_ID = 1
+                            MovieID = 1
                         },
                         new Actor_Movie()
                         {
                             Actor_ID = 3,
-                            Movie_ID = 1
+                            MovieID = 1
                         },
 
                          new Actor_Movie()
                         {
                             Actor_ID = 1,
-                            Movie_ID = 2
+                            MovieID = 2
                         },
                          new Actor_Movie()
                         {
                             Actor_ID = 4,
-                            Movie_ID = 2
+                            MovieID = 2
                         },
 
                         new Actor_Movie()
                         {
                             Actor_ID = 1,
-                            Movie_ID = 3
+                            MovieID = 3
                         },
                         new Actor_Movie()
                         {
                             Actor_ID = 2,
-                            Movie_ID = 3
+                            MovieID = 3
                         },
                         new Actor_Movie()
                         {
                             Actor_ID = 5,
-                            Movie_ID = 3
-                        },
-
-
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 2,
-                            Movie_ID = 4
-                        },
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 3,
-                            Movie_ID = 4
-                        },
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 4,
-                            Movie_ID = 4
+                            MovieID = 3
                         },
 
 
                         new Actor_Movie()
                         {
                             Actor_ID = 2,
-                            Movie_ID = 5
+                            MovieID = 4
                         },
                         new Actor_Movie()
                         {
                             Actor_ID = 3,
-                            Movie_ID = 5
+                            MovieID = 4
                         },
                         new Actor_Movie()
                         {
                             Actor_ID = 4,
-                            Movie_ID = 5
+                            MovieID = 4
+                        },
+
+
+                        new Actor_Movie()
+                        {
+                            Actor_ID = 2,
+                            MovieID = 5
+                        },
+                        new Actor_Movie()
+                        {
+                            Actor_ID = 3,
+                            MovieID = 5
+                        },
+                        new Actor_Movie()
+                        {
+                            Actor_ID = 4,
+                            MovieID = 5
                         },
                         new Actor_Movie()
                         {
                             Actor_ID = 5,
-                            Movie_ID = 5
+                            MovieID = 5
                         },
 
 
                         new Actor_Movie()
                         {
                             Actor_ID = 3,
-                            Movie_ID = 6
+                            MovieID = 6
                         },
                         new Actor_Movie()
                         {
                             Actor_ID = 4,
-                            Movie_ID = 6
+                            MovieID = 6
                         },
                         new Actor_Movie()
                         {
                             Actor_ID = 5,
-                            Movie_ID = 6
+                            MovieID = 6
                         },
                     });
                     context.SaveChanges();

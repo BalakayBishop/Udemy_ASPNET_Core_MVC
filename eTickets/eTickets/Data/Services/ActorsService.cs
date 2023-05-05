@@ -26,7 +26,7 @@ namespace eTickets.Data.Services
         // ----- GET SINGLE USER -----
         public async Task<ActorModel> GetByIDAsync(int id)
         {
-            var result = await _context.Actors.FirstOrDefaultAsync(n => n.Actor_ID == id);
+            var result = await _context.Actors.FirstOrDefaultAsync(n => n.ID == id);
             return result;
         }
 
@@ -40,7 +40,7 @@ namespace eTickets.Data.Services
         // ----- UPDATE USER -----
         public async Task<ActorModel> UpdateAsync(int id, ActorModel updateActor)
         {
-            var actor = await _context.Actors.FirstOrDefaultAsync(a => a.Actor_ID == id);
+            var actor = await _context.Actors.FirstOrDefaultAsync(a => a.ID == id);
 
             if (actor != null)
             {
@@ -57,7 +57,7 @@ namespace eTickets.Data.Services
         // ----- DELETE USER -----
         public async Task DeleteAsync(int id)
         {
-            var result = await _context.Actors.FirstOrDefaultAsync(a => a.Actor_ID == id);
+            var result = await _context.Actors.FirstOrDefaultAsync(a => a.ID == id);
             _context.Actors.Remove(result);
             await _context.SaveChangesAsync();
         }

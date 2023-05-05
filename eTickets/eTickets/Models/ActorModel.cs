@@ -9,7 +9,7 @@ namespace eTickets.Models
     public class ActorModel
     {
         [Key]
-        public int Actor_ID { get; set; }
+        public int ID { get; set; }
 
         [Display(Name = "Profile Picture")]
         [Required(ErrorMessage = "Profile Picture is required")]

@@ -9,7 +9,7 @@ namespace eTickets.Models
     public class CinemaModel
     {
         [Key]
-        public int Cinema_ID { get; set; }
+        public int ID { get; set; }
 
         [Display(Name = "Cinema Logo")]
         public string Logo { get; set; }

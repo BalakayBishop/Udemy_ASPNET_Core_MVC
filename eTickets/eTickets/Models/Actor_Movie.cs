@@ -7,13 +7,10 @@ namespace eTickets.Models
 {
     public class Actor_Movie
     {
-        public int Movie_ID { get; set; }
         public int Actor_ID { get; set; }
-
-        public MovieModel Movie { get; set; }
         public ActorModel Actor { get; set; }
 
-        //Relationship
-
+        public int Movie_ID { get; set; }
+        public MovieModel Movie { get; set; }
     }
 }
