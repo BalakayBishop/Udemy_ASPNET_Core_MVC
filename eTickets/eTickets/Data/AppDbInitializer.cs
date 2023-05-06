@@ -219,101 +219,58 @@ namespace eTickets.Data
                 // Add Actors & Movies
                 if (!context.Actors_Movies.Any())
                 {
-                    context.Actors_Movies.AddRange(new List<Actor_Movie>()
+                    context.Actors_Movies.AddRange(new List<Actors_Movies>()
                     {
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 1,
-                            Movie_ID = 1
-                        },
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 3,
-                            Movie_ID = 1
-                        },
+                        new Actors_Movies()
+                        {Actor_ID = 1,Movie_ID = 1},
 
-                         new Actor_Movie()
-                        {
-                            Actor_ID = 1,
-                            Movie_ID = 2
-                        },
-                         new Actor_Movie()
-                        {
-                            Actor_ID = 4,
-                            Movie_ID = 2
-                        },
+                        new Actors_Movies()
+                        {Actor_ID = 3,Movie_ID = 1},
 
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 1,
-                            Movie_ID = 3
-                        },
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 2,
-                            Movie_ID = 3
-                        },
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 5,
-                            Movie_ID = 3
-                        },
+                        new Actors_Movies()
+                        {Actor_ID = 1,Movie_ID = 2},
 
+                        new Actors_Movies()
+                        {Actor_ID = 4, Movie_ID = 2},
 
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 2,
-                            Movie_ID = 4
-                        },
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 3,
-                            Movie_ID = 4
-                        },
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 4,
-                            Movie_ID = 4
-                        },
+                        new Actors_Movies()
+                        {Actor_ID = 1, Movie_ID = 3},
 
+                        new Actors_Movies()
+                        {Actor_ID = 2, Movie_ID = 3},
 
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 2,
-                            Movie_ID = 5
-                        },
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 3,
-                            Movie_ID = 5
-                        },
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 4,
-                            Movie_ID = 5
-                        },
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 5,
-                            Movie_ID = 5
-                        },
+                        new Actors_Movies()
+                        {Actor_ID = 5, Movie_ID = 3},
 
+                        new Actors_Movies()
+                        {Actor_ID = 2, Movie_ID = 4},
 
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 3,
-                            Movie_ID = 6
-                        },
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 4,
-                            Movie_ID = 6
-                        },
-                        new Actor_Movie()
-                        {
-                            Actor_ID = 5,
-                            Movie_ID = 6
-                        },
+                        new Actors_Movies()
+                        {Actor_ID = 3, Movie_ID = 4},
+
+                        new Actors_Movies()
+                        {Actor_ID = 4, Movie_ID = 4},
+
+                        new Actors_Movies()
+                        {Actor_ID = 2, Movie_ID = 5},
+
+                        new Actors_Movies()
+                        {Actor_ID = 3, Movie_ID = 5},
+
+                        new Actors_Movies()
+                        {Actor_ID = 4, Movie_ID = 5},
+
+                        new Actors_Movies()
+                        {Actor_ID = 5,Movie_ID = 5},
+
+                        new Actors_Movies()
+                        {Actor_ID = 3, Movie_ID = 6},
+
+                        new Actors_Movies()
+                        {Actor_ID = 4, Movie_ID = 6},
+
+                        new Actors_Movies()
+                        {Actor_ID = 5, Movie_ID = 6},
                     });
                     context.SaveChanges();
                 }

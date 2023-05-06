@@ -8,8 +8,8 @@ namespace eTickets.Models
 {
     public class ProducerModel
     {
-        [Key] // this pk needs the import of DataAnnotations
-        public int Producer_ID { get; set; }
+        [Key]
+        public int ID { get; set; }
 
         [Display(Name ="Profile Picture")]
         public string ProfilePicURL { get; set; }
