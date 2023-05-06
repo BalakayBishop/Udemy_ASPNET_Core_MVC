@@ -27,7 +27,7 @@ namespace eTickets.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("FullName,ProfilePictureURL,Bio")] ActorModel actor)
+        public async Task<IActionResult> Create([Bind("FullName,ProfilePicURL,Biography")] ActorModel actor)
         {
             if (!ModelState.IsValid)
             {
@@ -55,15 +55,28 @@ namespace eTickets.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, [Bind("Actor_ID,FullName,ProfilePicURL,Biography")] ActorModel actor)
+        public async Task<IActionResult> Edit(int id, [Bind("FullName,ProfilePicURL,Biography")] ActorModel actor)
         {
             if (!ModelState.IsValid)
             {
                 return View(actor);
             }
-            await _service.UpdateAsync(id, actor);
+
+            var existingActor = await _service.GetByIDAsync(id);
+            if (existingActor == null)
+            {
+                return View("NotFound");
+            }
+
+            existingActor.FullName = actor.FullName;
+            existingActor.ProfilePicURL = actor.ProfilePicURL;
+            existingActor.Biography = actor.Biography;
+
+            await _service.UpdateAsync(id, existingActor);
+
             return RedirectToAction(nameof(Index));
         }
+
 
         //Get: Actors/Delete
         public async Task<IActionResult> Delete(int id)

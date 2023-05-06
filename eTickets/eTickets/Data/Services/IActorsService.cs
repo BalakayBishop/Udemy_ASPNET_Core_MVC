@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 
 namespace eTickets.Data.Services
 {
-    public interface IActorsService: IEntityBaseRepository<ActorModel>
+    public interface IActorsService : IEntityBaseRepository<ActorModel>
     {
-
     }
 }
