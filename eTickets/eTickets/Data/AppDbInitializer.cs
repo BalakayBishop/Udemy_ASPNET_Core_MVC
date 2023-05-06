@@ -148,8 +148,8 @@ namespace eTickets.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-3.jpeg",
                             Start_Date = DateTime.Now.AddDays(-10),
                             End_Date = DateTime.Now.AddDays(10),
-                            CinemaID = 3,
-                            ProducerID = 3,
+                            Cinema_ID = 3,
+                            Producer_ID = 3,
                             MovieCategory = MovieCategory.Documentary
                         },
                         new MovieModel()
@@ -160,8 +160,8 @@ namespace eTickets.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
                             Start_Date = DateTime.Now,
                             End_Date = DateTime.Now.AddDays(3),
-                            CinemaID = 1,
-                            ProducerID = 1,
+                            Cinema_ID = 1,
+                            Producer_ID = 1,
                             MovieCategory = MovieCategory.Action
                         },
                         new MovieModel()
@@ -172,8 +172,8 @@ namespace eTickets.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-4.jpeg",
                             Start_Date = DateTime.Now, 
                             End_Date = DateTime.Now.AddDays(7),
-                            CinemaID = 4,
-                            ProducerID = 4,
+                            Cinema_ID = 4,
+                            Producer_ID = 4,
                             MovieCategory = MovieCategory.Horror
                         },
                         new MovieModel()
@@ -184,8 +184,8 @@ namespace eTickets.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-6.jpeg",
                             Start_Date = DateTime.Now.AddDays(-10),
                             End_Date = DateTime.Now.AddDays(-5),
-                            CinemaID = 1,
-                            ProducerID = 2,
+                            Cinema_ID = 1,
+                            Producer_ID = 2,
                             MovieCategory = MovieCategory.Documentary
                         },
                         new MovieModel()
@@ -196,8 +196,8 @@ namespace eTickets.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-7.jpeg",
                             Start_Date = DateTime.Now.AddDays(-10),
                             End_Date = DateTime.Now.AddDays(-2),
-                            CinemaID = 1,
-                            ProducerID = 3,
+                            Cinema_ID = 1,
+                            Producer_ID = 3,
                             MovieCategory = MovieCategory.Comedy
                         },
                         new MovieModel()
@@ -208,8 +208,8 @@ namespace eTickets.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-8.jpeg",
                             Start_Date = DateTime.Now.AddDays(3),
                             End_Date = DateTime.Now.AddDays(20),
-                            CinemaID = 1,
-                            ProducerID = 5,
+                            Cinema_ID = 1,
+                            Producer_ID = 5,
                             MovieCategory = MovieCategory.Drama
                         }
                     });
@@ -219,57 +219,57 @@ namespace eTickets.Data
                 // Add Actors & Movies
                 if (!context.Actors_Movies.Any())
                 {
-                    context.Actors_Movies.AddRange(new List<Actor_Movie>()
+                    context.Actors_Movies.AddRange(new List<Actors_Movies>()
                     {
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 1,Movie_ID = 1},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 3,Movie_ID = 1},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 1,Movie_ID = 2},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 4, Movie_ID = 2},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 1, Movie_ID = 3},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 2, Movie_ID = 3},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 5, Movie_ID = 3},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 2, Movie_ID = 4},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 3, Movie_ID = 4},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 4, Movie_ID = 4},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 2, Movie_ID = 5},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 3, Movie_ID = 5},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 4, Movie_ID = 5},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 5,Movie_ID = 5},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 3, Movie_ID = 6},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 4, Movie_ID = 6},
 
-                        new Actor_Movie()
+                        new Actors_Movies()
                         {Actor_ID = 5, Movie_ID = 6},
                     });
                     context.SaveChanges();

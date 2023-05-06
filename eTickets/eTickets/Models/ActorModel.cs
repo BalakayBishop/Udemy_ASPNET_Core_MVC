@@ -1,4 +1,5 @@
-﻿using System;
+﻿using eTickets.Data.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eTickets.Models
 {
-    public class ActorModel
+    public class ActorModel: IEntityBase
     {
         [Key]
         public int ID { get; set; }
@@ -25,6 +26,6 @@ namespace eTickets.Models
         public string Biography { get; set; }
 
         //Relationships
-        public List<Actor_Movie> Actors_Movies { get; set; }
+        public List<Actors_Movies> Actors_Movies { get; set; }
     }
 }
