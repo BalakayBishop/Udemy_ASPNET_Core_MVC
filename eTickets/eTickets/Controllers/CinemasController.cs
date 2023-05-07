@@ -17,6 +17,7 @@ namespace eTickets.Controllers
             _service = service;
         }
 
+        [HttpGet]
         public async Task<IActionResult> IndexAsync()
         {
             var allCinemas = await _service.GetAllAsync();
@@ -41,6 +42,7 @@ namespace eTickets.Controllers
         }
 
         // Get: Cinemas/Details/ID
+        [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
             var cinemaDetail = await _service.GetByIDAsync(id);
@@ -49,6 +51,27 @@ namespace eTickets.Controllers
             return View(cinemaDetail);
         }
 
+        // Get: Cinemas/Edit/ID
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var cinemaDetail = await _service.GetByIDAsync(id);
+            if (cinemaDetail == null) return View("NotFound");
 
+            return View(cinemaDetail);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Logo,Name,Description")] CinemaModel cinema)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(cinema);
+            }
+
+            await _service.UpdateAsync(id, cinema);
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
