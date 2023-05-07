@@ -45,6 +45,7 @@ namespace eTickets.Controllers
             if (!ModelState.IsValid) return View(producer);
 
             await _service.AddAsync(producer);
+            
             return RedirectToAction(nameof(Index));
         }
 
@@ -69,6 +70,26 @@ namespace eTickets.Controllers
             }
 
             return View(producer);
+        }
+
+        // Get: Producers/Delete/ID
+        public async Task<IActionResult> Delete(int id)
+        {
+            var producerDetails = await _service.GetByIDAsync(id);
+            if (producerDetails == null) return View("NotFound");
+
+            return View(producerDetails);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var producerDetails = await _service.GetByIDAsync(id);
+            if (producerDetails == null) return View("NotFound");
+
+            await _service.DeleteAsync(id);
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }
