@@ -2,6 +2,9 @@
 using eTickets.Data.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace eTickets.Controllers
@@ -17,8 +20,8 @@ namespace eTickets.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var allMoviess = await _service.GetAllAsync();
-            return View(allMoviess);
+            var allMovies = await _service.GetAllAsync(n => n.Cinema);
+            return View(allMovies);
         }
     }
 }
