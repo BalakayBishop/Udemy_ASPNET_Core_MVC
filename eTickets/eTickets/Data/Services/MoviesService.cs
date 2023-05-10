@@ -13,6 +13,39 @@ namespace eTickets.Data.Services
 
         public MoviesService(AppDbContext context) : base(context) { _context = context; }
 
+        public async Task AddNewMovieAsync(NewMovieVM data)
+        {
+            var newMovie = new MovieModel()
+            {
+                Name = data.Name,
+                Description = data.Description,
+                Price = data.Price,
+                ImageURL = data.ImageURL,
+                Cinema_ID = data.Cinema_ID,
+                Start_Date = data.Start_Date,
+                End_Date = data.End_Date,
+                MovieCategory = data.MovieCategory,
+                Producer_ID = data.Producer_ID
+            };
+
+            await _context.Movies.AddAsync(newMovie);
+            await _context.SaveChangesAsync();
+
+            // Add Movie Actors
+            foreach (var actorID in data.Actor_IDs)
+            {
+                var newActorMovie = new Actors_Movies()
+                {
+                    Movie_ID = newMovie.ID,
+                    Actor_ID = actorID
+                };
+
+                await _context.Actors_Movies.AddAsync(newActorMovie);
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<MovieModel> GetMovieIDAsync(int id)
         {
             var movieDetails = await _context.Movies
