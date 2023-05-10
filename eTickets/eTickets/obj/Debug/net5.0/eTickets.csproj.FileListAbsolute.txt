@@ -103,3 +103,4 @@ D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\Razor\Views
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\Razor\Views\Cinemas\Delete.cshtml.g.cs
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\Razor\Views\Movies\Details.cshtml.g.cs
 D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\Razor\Views\Movies\Create.cshtml.g.cs
+D:\Projects\Udemy_ASPNET_Core_MVC\eTickets\eTickets\obj\Debug\net5.0\Razor\Views\Shared\_CreateItem.cshtml.g.cs
