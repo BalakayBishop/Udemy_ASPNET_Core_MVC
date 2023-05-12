@@ -1,5 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace eTickets.Models
 {
@@ -14,11 +18,13 @@ namespace eTickets.Models
 
         // Ref to Movie
         public int Movie_ID { get; set; }
+        
         [ForeignKey("Movie_ID")]
         public MovieModel Movie { get; set; }
 
         // Ref to Order
         public int Order_ID { get; set; }
+        
         [ForeignKey("Order_ID")]
         public Order Order { get; set; }
     }

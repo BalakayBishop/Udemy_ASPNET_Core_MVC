@@ -8,7 +8,7 @@ namespace eTickets.Models
         [Key]
         public int ID { get; set; }
 
-        public string email { get; set; }
+        public string Email { get; set; }
 
         public string User_ID { get; set; }
 

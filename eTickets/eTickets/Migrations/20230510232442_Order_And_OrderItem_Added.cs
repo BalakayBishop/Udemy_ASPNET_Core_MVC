@@ -6,26 +6,6 @@ namespace eTickets.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.RenameColumn(
-                name: "Producer_ID",
-                table: "Producers",
-                newName: "ID");
-
-            migrationBuilder.RenameColumn(
-                name: "Movie_ID",
-                table: "Movies",
-                newName: "ID");
-
-            migrationBuilder.RenameColumn(
-                name: "Cinema_ID",
-                table: "Cinemas",
-                newName: "ID");
-
-            migrationBuilder.RenameColumn(
-                name: "Actor_ID",
-                table: "Actors",
-                newName: "ID");
-
             migrationBuilder.AlterColumn<string>(
                 name: "ProfilePicURL",
                 table: "Producers",
