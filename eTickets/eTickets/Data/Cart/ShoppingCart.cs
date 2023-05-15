@@ -37,7 +37,7 @@ namespace eTickets.Data.Cart
         {
             var shoppingCartItem = _context.ShoppingCartItems.FirstOrDefault(n => n.Movie.ID == movie.ID && n.ShoppingCartID == ShoppingCartID);
 
-            if (shoppingCartItem != null)
+            if (shoppingCartItem == null)
             {
                 shoppingCartItem = new ShoppingCartItem()
                 {
@@ -52,7 +52,6 @@ namespace eTickets.Data.Cart
             {
                 shoppingCartItem.Amount++;
             }
-
             _context.SaveChanges();
         }
 
