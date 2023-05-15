@@ -88,8 +88,6 @@ namespace eTickets.Data.Cart
 
             _context.ShoppingCartItems.RemoveRange(items);
             await _context.SaveChangesAsync();
-
-            return View("OrderCompleted");
         }
 
     }

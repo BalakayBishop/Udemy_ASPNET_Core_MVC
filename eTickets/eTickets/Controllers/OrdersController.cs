@@ -19,6 +19,14 @@ namespace eTickets.Controllers
             _ordersService = ordersService;
         }
 
+        public async Task<IActionResult> Index()
+        {
+            string userID = string.Empty;
+            var orders = await _ordersService.GetOrderByUserIDAsync(userID);
+
+            return View(orders);
+        }
+
         public IActionResult ShoppingCart()
         {
             var items = _shoppingCart.GetShoppingCartItems();
@@ -67,6 +75,8 @@ namespace eTickets.Controllers
             await _ordersService.StoreOrderAsync(items, userID, userEmail);
 
             await _shoppingCart.ClearShoppingCartAsync();
+
+            return View("OrderCompleted");
         }
     }
 }
